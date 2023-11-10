@@ -1,0 +1,41 @@
+{% extends 'parent.html' %}
+
+{% block title %}<title>MBTI大赏-首页</title>{% endblock %}
+
+{% block css %}
+    <link href="/static/css/top-col-center.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="cards">
+    <div class="main-card">
+        <div class="main-card-a" style="color: #8f759f;text-align: right;">M</div>
+        <div class="main-card-a" style="color: #7ea663;text-align: center;">B</div>
+        <div class="main-card-a" style="color: #73cee4;text-align: right;">T</div>
+        <div class="main-card-a" style="color: #f3d65d;text-align: center;">I</div>
+        <div class="main-card-b">
+            <a href="/mbti/profile" class="link">
+                <i class="fa fa-angle-double-right" style="font-size:80px;color:#8b5742"></i>
+                <span> ...是？？</span>
+            </a>
+        </div>
+    </div>
+    <div class="sub-card-l">
+        <div>
+            <a href="/mbti/free">
+                <img src="/static/pics/maoyu1.jpg">
+            </a>
+        </div>
+        <div class="vertical-text" style="padding-right: 7px;writing-mode: vertical-rl;">我要!陈词</div>
+    </div>
+    <div class="sub-card-r">
+        <div class="vertical-text" style="padding-left: 7px;writing-mode: vertical-lr;">我要!梗图</div>
+        <a href="/mbti/memes">
+            <img src="/static/pics/maoyu2.jpg">
+        </a>
+    </div>
+</div>
+
+{% endblock %}

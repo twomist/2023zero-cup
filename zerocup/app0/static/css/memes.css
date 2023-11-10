@@ -1,0 +1,28 @@
+/* 中间主体 */
+.container4
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 35px auto 0;
+}
+
+/* 各列 */
+.sub-container4
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+img
+{
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+img:hover
+{
+    transform: scale(1.5);
+    box-shadow:0 0 10px 10px #F8F8FF;
+}

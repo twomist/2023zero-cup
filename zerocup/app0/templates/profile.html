@@ -1,0 +1,115 @@
+{% extends 'parent.html' %}
+
+{% block title %}<title>MBTI大赏-简介</title>{% endblock %}
+
+{% block css %}
+    <link href="/static/css/profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container1">
+    <div class="text">
+        <h3><i class="fa fa-circle"></i>简述</h3>
+        <div>MBTI，这里无视它的全称，它是一种人格类型理论模型。以4个维度的2种倾向程度对人分析，由此划分出16种人格类型，两边流着的人正是（被揣测的）各个类型的代表。</div>
+    </div>
+    <div class="text">
+        <h3><i class="fa fa-circle"></i>四维度&八指标</h3>
+        <table>
+            <tr>
+                <th>评价维度</th>
+                <th>类型</th>
+                <th>对应缩写</th>
+            </tr>
+            <tr>
+                <td>注意力方向（精力来源）</td>
+                <td>外倾/内倾</td>
+                <td>E/I</td>
+            </tr>
+            <tr>
+                <td>认知方式（如何搜集信息）</td>
+                <td>实感/直觉</td>
+                <td>S/N</td>
+            </tr>
+            <tr>
+                <td>判断方式（如何做决定）</td>
+                <td>思考/情感</td>
+                <td>T/F</td>
+            </tr>
+            <tr>
+                <td>生活方式（如何应对外部世界）</td>
+                <td>判断/感知</td>
+                <td>J/P</td>
+            </tr>
+        </table>
+    </div>
+    <div class="text">
+        <h3><i class="fa fa-circle"></i>十六种人格类型</h3>
+        <div class="show">
+            <div class="purple">
+                <a href="/mbti/profile/intj" target="_blank">INTJ</a>
+            </div>
+            <div class="purple">
+                <a href="/mbti/profile/intp" target="_blank">INTP</a>
+            </div>
+            <div class="purple">
+                <a href="/mbti/profile/entj" target="_blank">ENTJ</a>
+            </div>
+            <div class="purple" >
+                <a href="/mbti/profile/entp" target="_blank">ENTP</a>
+            </div>
+            <div class="green">
+                <a href="/mbti/profile/infj" target="_blank">INFJ</a>
+            </div>
+            <div class="green">
+                <a href="/mbti/profile/infp" target="_blank">INFP</a>
+            </div>
+            <div class="green">
+                <a href="/mbti/profile/enfj" target="_blank">ENFJ</a>
+            </div>
+            <div class="green">
+                <a href="/mbti/profile/enfp" target="_blank">ENFP</a>
+            </div>
+            <div class="blue">
+                <a href="/mbti/profile/istj" target="_blank">ISTJ</a>
+            </div>
+            <div class="blue">
+                <a href="/mbti/profile/isfj" target="_blank">ISFJ</a>
+            </div>
+            <div class="blue">
+                <a href="/mbti/profile/estj" target="_blank">ESTJ</a>
+            </div>
+            <div class="blue">
+                <a href="/mbti/profile/esfj" target="_blank">ESFJ</a>
+            </div>
+            <div class="yellow">
+                <a href="/mbti/profile/istp" target="_blank">ISTP</a>
+            </div>
+            <div class="yellow">
+                <a href="/mbti/profile/isfp" target="_blank">ISFP</a>
+            </div>
+            <div class="yellow">
+                <a href="/mbti/profile/estp" target="_blank">ESTP</a>
+            </div>
+            <div class="yellow">
+                <a href="/mbti/profile/esfp" target="_blank">ESFP</a>
+            </div>
+        </div>
+    </div>
+    <div class="text" style="border-bottom: none;">
+        <h3><i class="fa fa-circle"></i>一些话</h3>
+        <div>所以哪里能测MBTI?
+            <i class="fa fa-hand-o-right" style="font-size: 20px;"></i><a target="_blank" class="textlink" href="https://www16personalities.com/ch/%E4%BA%BA%E6%A0%BC%E6%B5%8B%E8%AF%95">-这里-</a>
+        </div>
+        <div>MBTI有什么用? 感觉测试结果和你不完全贴？结果的描述略笼统？
+            相信这种感觉（划)
+            如果70多亿人能被分成16种，它肯定详细不到哪，被刻板印象肯定无法避免。
+            虽然它在科学界受到诟病，但我们可以相信它比星座科学。大可以不从纯科学的角度看待MBTI，它确实在我们的日常生活中架起了一座简单粗暴的相互理解的桥。
+            如果你要更详细的内容，可以移步更专业的文章。（抱歉这里没有，自己找吧）
+        </div>
+        <a id="ps" href="/mbti/top">* 回首页康康</a>
+    </div>
+</div>
+
+{% endblock %}

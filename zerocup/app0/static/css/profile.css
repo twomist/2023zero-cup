@@ -1,0 +1,110 @@
+/* 中间主体 */
+.container1
+{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 四部分文字 */
+.text
+{
+    padding:0 10px 15px;
+    border-bottom: 5px dotted grey;
+    line-height: 200%;
+}
+.textlink
+{
+    background-color: beige;
+    margin: 2px;
+    color: black;
+    text-decoration: none;
+}
+.text i
+{
+    font-size: 15px;
+    margin-right: 8px;
+    color: #8b5742;
+}
+.text h3
+{
+    font-family: round,sans-serif;
+    font-size: 35px;
+    color: #8b5742;
+}
+.text div
+{
+    font-size: 22px;
+    letter-spacing: 4px;
+    white-space: pre-line;
+}
+
+/* 八维表格 */
+table
+{
+    border-collapse: collapse;
+    width: 80%;
+}
+th
+{
+    background-color: beige;
+}
+th,td
+{
+    border: 2px solid beige;
+    text-align: center;
+    padding: 4px;
+    font-size: 18px;
+}
+
+/* 十六人格卡片 */
+.show
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 3px;
+    text-align: center;
+}
+.show a
+{
+    font-family: round,sans-serif;
+    color: #3d4848;
+    font-size: 30px;
+    font-weight: 600;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin: 5px auto;
+    text-decoration: none;
+    color: black;
+}
+.show div:hover
+{
+    transform: scale(1.2);
+}
+.purple
+{
+    background-color: rgba(143, 117, 159,0.5);
+}
+.green
+{
+    background-color: rgba(126, 166, 99,0.5);
+}
+.blue
+{
+    background-color: rgba(115, 206, 228,0.5);
+}
+.yellow
+{
+    background-color: rgba(243, 214, 93,0.5);
+}
+
+#ps
+{
+    color: #8b5742;
+    font-size: 15px;
+    letter-spacing: 2px;
+}

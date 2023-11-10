@@ -1,0 +1,144 @@
+/* 圆体 粗体 */
+@font-face
+{
+    font-family: 'round';
+    src: url("../fonts/round.ttf");
+}
+@font-face
+{
+    font-family: 'bold';
+    src: url("../fonts/bold.ttf");
+}
+
+/* 两侧滚动 */
+@keyframes rolla
+{
+    from {transform: translateY(0)}
+    to {transform: translateY(-33.33%)}
+}
+@-webkit-keyframes rolla
+{
+    from {transform: translateY(0)}
+    to {transform: translateY(-33.33%)}
+}
+@-moz-keyframes rolla
+{
+    from {transform: translateY(0)}
+    to {transform: translateY(-33.33%)}
+}
+@keyframes rollb
+{
+    from {transform: translateY(-33.33%)}
+    to {transform: translateY(0)}
+}
+@-webkit-keyframes rollb
+{
+    from {transform: translateY(-33.33%)}
+    to {transform: translateY(0)}
+}
+@-moz-keyframes rollb
+{
+    from {transform: translateY(-33.33%)}
+    to {transform: translateY(0)}
+}
+
+/*小人跳动*/
+@keyframes jump
+{
+    0% {transform: translateY(0)}
+    40% {transform: translateY(-20%)}
+    100% {transform: translateY(0)}
+}
+@-webkit-keyframes jump
+{
+    0% {transform: translateY(0)}
+    40% {transform: translateY(-20%)}
+    100% {transform: translateY(0)}
+}
+
+.link
+{
+    text-decoration: none;
+    color: black;
+}
+
+/* 导航 */
+.nav
+{
+    display: flex;
+    width: 100%;
+    box-shadow: 0 8px 15px rgb(128, 128, 128);
+    position: relative;
+    z-index: 2;
+}
+.nav-logo
+{
+    margin:15px;
+    margin-left: 110px;
+    height: 50px;
+    line-height:60px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'round', sans-serif;
+}
+
+/* 三列主体 */
+.col-container0
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-column-gap: 10px;
+    background-color: white;
+    width: 88%;
+    height: 720px;
+    padding-top: 15px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+/* 边上两列背景小人 grid内嵌垂直flex */
+.col-container00
+{
+    top: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    height: 100%;
+}
+.col-container00 .roll1
+{
+    display: flex;
+    flex-direction: column;
+    animation: rolla 12s linear infinite;
+    -webkit-animation: rolla 12s linear infinite;
+    -moz-animation: rolla 12s linear infinite;
+}
+.col-container00 .roll2
+{
+    display: flex;
+    flex-direction: column;
+    animation: rollb 12s linear infinite;
+    -webkit-animation: rollb 12s linear infinite;
+    -moz-animation: rollb 12s linear infinite;
+}
+.col-container00 img
+{
+    transform: translate3d(0, 0, 0);  /* 开gpu */
+    max-height: 100%;
+    max-width: 100%;
+}
+.col-container00 img:hover
+{
+    animation: jump 0.8s;
+    -webkit-animation: jump 0.8s;
+    -moz-animation: jump 0.8s;
+}
+
+/* 中间列主体 */
+.col-center
+{
+    padding: 15px 40px;
+    border-left: 3px dotted grey;
+    border-right: 3px dotted grey;
+}

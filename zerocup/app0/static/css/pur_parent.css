@@ -1,0 +1,117 @@
+/* 主体容器 */
+.container2
+{
+    margin: 35px auto 0;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-gap: 10px;
+}
+
+/* 类型名 */
+.banner
+{
+    height: 70px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+.banner-a
+{
+    color: white;
+    background-color: #8f759f;
+    padding: 5px 10px;
+    font-size: 30px;
+    float: right;
+}
+.banner-b
+{
+    color: #734d5f;
+    font-size: 30px;
+    float: right;
+}
+
+/* 底部名言 */
+.motto
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 20px;
+    font-weight: bold;
+    color: #734d5f;
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* 介绍部分 */
+.desc
+{
+    padding: 15px 20px;
+    border: 4px dotted #8f759f;
+    position: relative;
+    z-index: 1;
+}
+.desc img
+{
+    position: absolute;
+    bottom: -50px;
+    left: -70px;
+    z-index: 2;
+    max-height: 300px;
+    max-width: 200px;
+}
+.desc div
+{
+    font-size: 18px;
+    color: #3d4848;
+    font-weight: 500;
+    white-space: pre-line;
+    letter-spacing: 2.5px;
+}
+
+.list
+{
+    padding: 15px;
+}
+.list div
+{
+    margin: 10px;
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+}
+.list i
+{
+     font-size: 15px;
+     margin-bottom: 7px;
+     color: #734d5f;
+}
+
+/* 换页 */
+.switcha
+{
+    position: fixed;
+    top: 48%;
+    left: 23%;
+    background-color: beige;
+}
+.switchb
+{
+    position: fixed;
+    top: 48%;
+    right: 23%;
+    background-color: beige;
+}
+.switcha i
+{
+    font-size: 35px;
+    color: #8f759f;
+}
+.switchb i
+{
+    font-size: 35px;
+    color: #8f759f;
+}

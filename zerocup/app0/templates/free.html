@@ -1,0 +1,92 @@
+{% extends 'parent.html' %}
+
+{% block title %}<title>MBTI大赏-留言</title>{% endblock %}
+
+{% block css %}
+<link href="/static/css/free.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container3">
+        <h4>留下任何有关自己的MBTI的话吧...共感？刻板？both？</h4>
+        <form method="post" class="submit-container">
+            {% csrf_token %}
+            <dl>
+                <dt>您的MBTI是：</dt>
+                <dd>
+                    <select name="type" id="which">
+                        <option value=" " style="display:none;"></option>
+                        <option value="intj">intj</option>
+                        <option value="intp">intp</option>
+                        <option value="entp">entp</option>
+                        <option value="entj">entj</option>
+                        <option value="infp">infp</option>
+                        <option value="enfp">enfp</option>
+                        <option value="infj">infj</option>
+                        <option value="enfj">enfj</option>
+                        <option value="istp">istp</option>
+                        <option value="estp">estp</option>
+                        <option value="istj">istj</option>
+                        <option value="estj">estj</option>
+                        <option value="isfp">isfp</option>
+                        <option value="esfp">esfp</option>
+                        <option value="isfj">isfj</option>
+                        <option value="esfj">esfj</option>
+                    </select>
+                </dd>
+            </dl>
+            <textarea rows="6" cols="30" name="content" placeholder="请自觉遵守法律法规且不要超过80字XD"
+                      id="messages"></textarea>
+            <button type="submit" id="submit">提交</button>
+        </form>
+        <h4>您路过的网友们曰：</h4>
+        <div class="message-container">
+            <div class="message" id="pur">
+                {% for msg in msgs %}
+                {% if msg.type == "intp" or msg.type == "intj" or msg.type == "entp" or msg.type == "entj"%}
+                <div>{{ msg.type }}：{{ msg.content }}</div>
+                {% endif %}
+                {% endfor %}
+                <div>entp：不是交际花，平时只对认可的朋友放飞自我，还有我理科不行但是文科好，这和我说话的逻辑思维也不冲突。</div>
+                <div>intp：希望路人们不要有官网的吹牛逼滤镜，我是什么废物我很清楚的。</div>
+                <div>entj：确实好胜心极强以至于不择手段地求胜，但我不是经典霸总，不热爱当领导，也不一天到晚板着个脸。</div>
+                <div>intj：我的评价是，对，一切关于intj的刻板印象都是真的。</div>
+            </div>
+            <div class="message" id="gre">
+                {% for msg in msgs %}
+                {% if msg.type == "infp" or msg.type == "infj" or msg.type == "enfp" or msg.type == "enfj"%}
+                <div>{{ msg.type }}：{{ msg.content }}</div>
+                {% endif %}
+                {% endfor %}
+                <div>enfj：我真的讨厌死了enfj的共情能力。</div>
+                <div>infp：热搜频频出现infp到底是为什么，还有infp不是那种阴暗批拖别人共沉沦的five，只是情感比较丰富在这种环境下容易emo，一个人emo一下没惹任何人。</div>
+                <div>enfp：想说描述非常准确，我就是从不内耗且希望所有人都是快乐的，但偶尔也是乐观的悲观者。</div>
+                <div>infj：看到喜欢独处安静沉稳高冷无情的刻板印象我人都傻了，实际上比较社恐,但我会更想且在努力成为e人。</div>
+            </div>
+            <div class="message" id="blu">
+                {% for msg in msgs %}
+                {% if msg.type == "istj" or msg.type == "isfj" or msg.type == "estj" or msg.type == "esfj"%}
+                <div>{{ msg.type }}：{{ msg.content }}</div>
+                {% endif %}
+                {% endfor %}
+                <div>esfj：我们esfj就是利他主义者，非常担心身边人的安全和幸福，保护每一个朋友是我们的使命。</div>
+                <div>istj：别人有刻板印象不过没有不满，istj确实外冷中热内冷。</div>
+                <div>estj：非常满意理性逻辑怪的人设哈哈哈哈哈哈。</div>
+                <div>isfj：为什么有人觉得isfj就必须得是特别特别善良的人，特别会为他人考虑。</div>
+            </div>
+            <div class="message" id="yel">
+                {% for msg in msgs %}
+                {% if msg.type == "isfp" or msg.type == "istp" or msg.type == "estp" or msg.type == "esfp"%}
+                <div>{{ msg.type }}：{{ msg.content }}</div>
+                {% endif %}
+                {% endfor %}
+                <div>istp：钻不是时尚单品，我们也不会每天脑子里全是反社会和毁灭世界。</div>
+                <div>estp：确实爱财利己，喜欢好看的东西，有些事情不能共情但能说出对方爱听的。不过并没有不爱解释或辩论或责任感不强。</div>
+                <div>esfp：满意描述，因为我的人生最大目标就是快乐。</div>
+                <div>isfp：我在很多事上很有计划和条理，自己有点强迫症，但我做了那么多次永远是p。</div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
